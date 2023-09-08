@@ -40,7 +40,7 @@ plt.figure(figsize=(12, 8))
 plot_tree(classifier,feature_names=["Pclass","Age","Sex"],class_names=["Not survived","survived"], filled=True)
 plt.show()
 
-new_data = pd.DataFrame([[1,22,0]],columns=["Pclass","Age","Sex"])
+new_data = pd.DataFrame([[3,22,0]],columns=["Pclass","Age","Sex"])
 predictions = classifier.predict(new_data)
 predictions_mapped = ["Survived" if prediction == 1 else "Dead" for prediction in predictions]
 
